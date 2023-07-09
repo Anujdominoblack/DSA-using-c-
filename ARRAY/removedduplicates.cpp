@@ -3,7 +3,8 @@
 using  namespace std;
 int revdups(int arr[],int n)
 {
-    int temp[7];
+    int temp[n];
+    temp[0]=arr[0];
     int res=1;
     for(int i=1;i<n;i++)
     {
@@ -22,9 +23,9 @@ int revdups(int arr[],int n)
 
 int main()
 {
-    int arr[]={10,20,20,30,30,30,30};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    int result=revdups(arr,n);
+    int arr[]={10,20,20,30,30,30,30};  //array is created 
+    int n=sizeof(arr)/sizeof(arr[0]);   //sieof the array
+    int result=revdups(arr,n);  //result is displayed
     cout<<result;
     return 0;
 }
