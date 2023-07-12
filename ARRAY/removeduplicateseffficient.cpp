@@ -20,7 +20,7 @@ int revduplicates(int arr[],int n)
 
 int main()
 {
-    int arr[]={10,20,20,30,30,30,30};  //array is created
+    int arr[]={1,1,2};  //array is created
     int n=sizeof(arr)/sizeof(arr[0]);  
     int result=revduplicates(arr,n);//function call
     cout<<result;  //result is being displayed
