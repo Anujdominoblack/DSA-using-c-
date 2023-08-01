@@ -14,7 +14,7 @@ int main()  //naive solution
             break;
         }
     }
-
+    
     cout<<(n-i);  //subtracting first index of i from size 
     return 0;
 
