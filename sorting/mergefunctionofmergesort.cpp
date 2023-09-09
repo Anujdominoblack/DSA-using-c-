@@ -5,64 +5,63 @@
 #include<algorithm>
 using namespace std;
 
-// function for merge 
-void merge(int arr[],int low,int mid,int high)
+void merge(int arr[], int l, int m, int r)
 {
-    int n1=mid-low+1; // for size of two arrays that are we are dividing
-    int n2=high-mid;
-     
-    int left[n1],right[n2];
-    for(int i=0;i<n1;i++)
-    {
-        left[i]=arr[low+i];
-    }
-    for(int j=0;j<n2;j++)
-    {
-        right[j]=arr[mid+1+j];
-    }
-    // now as our left and right array is succesfullly created
-    // now we will apply our merge logic
-    int i=0,j=0,k=0;
-    while(i<n1 && j<n2)
-    {
-        if(left[i]<=right[j])
-        {
-            arr[k]=left[i];
-            i++;  // increasing left array
-            // increasing input array size
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
+ 
+    // Create temp arrays
+    int L[n1], R[n2];
+ 
+    // Copy data to temp arrays L[] and R[]
+    for (i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for (j = 0; j < n2; j++)
+        R[j] = arr[m + 1 + j];
+ 
+    // Merge the temp arrays back into arr[l..r
+    i = 0;
+    j = 0;
+    k = 0;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
         }
-        else{
-            arr[k]=right[j];
+        else {
+            arr[k] = R[j];
             j++;
-          
         }
         k++;
     }
-    while(i<n1)
-    {
-        arr[k]=left[i];
+ 
+    // Copy the remaining elements of L[],
+    // if there are any
+    while (i < n1) {
+        arr[k] = L[i];
         i++;
         k++;
     }
-    while(j<n2)
-    {
-        arr[k]=right[j];
+ 
+    // Copy the remaining elements of R[],
+    // if there are any
+    while (j < n2) {
+        arr[k] = R[j];
         j++;
         k++;
     }
-
-  for(int i=0;i<high;i++)
-  {
-    cout<<arr[i]<<" ";
-  }
-   
+    for(int i=0;i<n1+n2;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
 }
-
 //driver code
 int main()
 {
     int arr[]={10,15,21,01,51,98,82};
-   
+    
     merge(arr,0,3,6);
+   
     return 0;
 }
