@@ -8,7 +8,7 @@ using namespace std;
 // function for merge 
 void merge(int arr[],int low,int mid,int high)
 {
-    int n1=mid-low; // for size of two arrays that are we are dividing
+    int n1=mid-low+1; // for size of two arrays that are we are dividing
     int n2=high-mid;
      
     int left[n1],right[n2];
@@ -18,7 +18,7 @@ void merge(int arr[],int low,int mid,int high)
     }
     for(int j=0;j<n2;j++)
     {
-        right[j]=arr[n1+j];
+        right[j]=arr[mid+1+j];
     }
     // now as our left and right array is succesfullly created
     // now we will apply our merge logic
@@ -29,13 +29,14 @@ void merge(int arr[],int low,int mid,int high)
         {
             arr[k]=left[i];
             i++;  // increasing left array
-            k++;  // increasing input array size
+            // increasing input array size
         }
         else{
             arr[k]=right[j];
             j++;
-            k++;
+          
         }
+        k++;
     }
     while(i<n1)
     {
@@ -61,9 +62,7 @@ void merge(int arr[],int low,int mid,int high)
 int main()
 {
     int arr[]={10,15,21,01,51,98,82};
-    int low=0;
-    int n = sizeof(arr)/sizeof(arr[0]);
-    int mid = (n+low)/2;
-    merge(arr,0,mid,n);
+   
+    merge(arr,0,3,6);
     return 0;
 }
