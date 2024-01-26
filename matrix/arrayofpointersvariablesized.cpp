@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     int m=3,n=2;
-    int *arr[m];
+    int *arr[m];  // here m corresponds to rows 
     for(int i=0;i<m;i++)
     {
         arr[i] = new int [n];  // dynamic memory allocation creating array for each associated pointer 
