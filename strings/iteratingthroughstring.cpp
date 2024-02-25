@@ -9,5 +9,11 @@ int main()
     {
         cout<<str[i]<<" ";
     }
+    
+
+     /*for(char x : str)
+    {
+        cout<<x;
+    }*/
     return 0;
 }
