@@ -8,7 +8,7 @@ struct node
     int data;
     node *next;
     node *prev;
-    node(int d)
+    node(int d)  //constructor 
     {   data = d;
         next=prev=NULL;
     }
