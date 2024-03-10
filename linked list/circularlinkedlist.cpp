@@ -22,7 +22,7 @@ void printlist(node *head)
     cout<<(head->data)<<" "; //printing head node
     for(node *p = head->next ; p!=head ;p=p->next) //writing condition
     {
-        cout<<(p->data)<<" ";
+        cout<<(p->data)<<" ";  //printing data
     }
 }
 
