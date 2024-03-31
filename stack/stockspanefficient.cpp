@@ -35,4 +35,3 @@ int main()
     printspan(arr,n);
     return 0;
 }
-// perfecto
