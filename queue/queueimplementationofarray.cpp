@@ -20,7 +20,7 @@ using namespace std;
     }
     void enque(int x){
         if(isfull()){return ;}
-        arr[size]==x;  // inserting at position 
+        arr[size]=x;  // inserting at position 
         size++;  //incrementing the size
     }
     void deque()
