@@ -1,0 +1,2 @@
+deque stands for doubly ended queue
+in this the insertion and deletion can be done from the both ends
