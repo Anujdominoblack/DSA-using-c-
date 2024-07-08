@@ -1,6 +1,7 @@
 #include<iostream>
 #include<queue>
 using namespace std;
+// writing the sructure in a specific format in a sorted node
 
 struct node{
     int key;
@@ -11,6 +12,7 @@ struct node{
         left = right = NULL;
     }
 };
+// function for the iteration 
 void printlevel(node *root)
 {
     if(root==NULL){return;}
@@ -34,6 +36,8 @@ void printlevel(node *root)
 
      
 }
+// driver code
+
 int main()
 {
     node *root = new node(10);
