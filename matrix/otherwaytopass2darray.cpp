@@ -34,3 +34,5 @@ int main()
     print(arr,m,n);
     return 0;
 }
+
+// succesfully implented using double pointers 
